@@ -1,6 +1,1 @@
-### 作业要求
-
-- 熟悉processing中提供的绘图函数；
-- 自行设计构形规则，利用processing中提供的绘图函数进行造型图案创作。
-
-✏️简单描述你的创意内容，将程序运行结果附在这里。
+<img width="599" alt="截屏2021-10-25 09 36 29" src="https://user-images.githubusercontent.com/90952935/138622242-bcad40bc-bbb9-41b5-8f65-f4b2983c9f07.png">
