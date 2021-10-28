@@ -1,7 +1,6 @@
 设计说明：设计了一组粒子会按照一定规律绕圈运动并改变自身颜色，会根据鼠标的位置做趋向性运动，并且当鼠标向屏幕右边移动时，粒子会出现类似鱼群的拖尾效果。
 源代码：
-
-Xiaoqiu [] xqs= new Xiaoqiu[1000];
+iaoqiu [] xqs= new Xiaoqiu[1000];
 float TMD;
 void setup()
 {
@@ -48,7 +47,6 @@ class Xiaoqiu
     angle+=0.02*noise(0.002*loc.x, 0.002*loc.y);//noise(loc.x, loc.y);
     vx=sin(angle);
     vy=cos(angle);
-
     loc.x+=vx;
     loc.y+=vy;
     float ox = map(mouseX,0,width,-2,2);
