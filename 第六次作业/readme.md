@@ -1,6 +1,6 @@
 设计说明：设计了一组粒子会按照一定规律绕圈运动并改变自身颜色，会根据鼠标的位置做趋向性运动，并且当鼠标向屏幕右边移动时，粒子会出现类似鱼群的拖尾效果。
 源代码：
-iaoqiu [] xqs= new Xiaoqiu[1000];
+Xiaoqiu [] xqs= new Xiaoqiu[1000];
 float TMD;
 void setup()
 {
@@ -44,9 +44,10 @@ class Xiaoqiu
   }
   void update()
   {
-    angle+=0.02*noise(0.002*loc.x, 0.002*loc.y);//noise(loc.x, loc.y);
+    angle+=0.02*noise(0.002*loc.x, 0.002*loc.y);//noise(loc.x, loc.y);作为一个矢量/坐标，在此有什么意义？可否换成别的无关随机变量？乘在其前系数意义是什么？noise值变化的含义？
     vx=sin(angle);
     vy=cos(angle);
+
     loc.x+=vx;
     loc.y+=vy;
     float ox = map(mouseX,0,width,-2,2);
