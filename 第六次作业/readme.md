@@ -4,18 +4,18 @@ Xiaoqiu [] xqs= new Xiaoqiu[1000];
 float TMD;
 void setup()
 {
-  size(800,800);
+  size(800, 800);
 
   for (int i=0; i<xqs.length; i++)
   {
-    xqs[i]=new Xiaoqiu (new PVector(random(width), random(height)), random(5,20));
+    xqs[i]=new Xiaoqiu (new PVector(random(width), random(height)), random(5, 20));
   }
 }
 void draw()
 {
-  TMD = map(mouseX,0,width,255,0);
+  TMD = map(mouseX, 0, width, 255, 0);
   noStroke();
-  fill(0,TMD);
+  fill(0, TMD);
   rect(0, 0, width, height);
   for (int i=0; i<xqs.length; i++)
   {
@@ -30,7 +30,7 @@ class Xiaoqiu
   float vx=0, vy=0;
   float r;
   float angle=0;
-  float R,G,B;
+  float R, G, B;
   boolean bianxiao =true;
   float maxr;
   Xiaoqiu(PVector location, float r)
@@ -38,9 +38,9 @@ class Xiaoqiu
     loc=location;
     this.r=r;
     maxr=r;
-    R=map(loc.x,0,width,0,255);
-    G=map(loc.x,0,width,255,0);
-    B=map(loc.y,0,height,0,255);
+    R=map(loc.x, 0, width, 0, 255);
+    G=map(loc.x, 0, width, 255, 0);
+    B=map(loc.y, 0, height, 0, 255);
   }
   void update()
   {
@@ -50,19 +50,19 @@ class Xiaoqiu
 
     loc.x+=vx;
     loc.y+=vy;
-    float ox = map(mouseX,0,width,-2,2);
-        float oy = map(mouseY,0,height,-2,2);
-loc.x+=ox;
+    float ox = map(mouseX, 0, width, -2, 2);
+    float oy = map(mouseY, 0, height, -2, 2);
+    loc.x+=ox;
     loc.y+=oy;
-    if(bianxiao)r-=0.3;
-    if(r<=0)bianxiao=false;
-    if(!bianxiao)r+=0.3;
-    if(r>=maxr) bianxiao=true;
+    if (bianxiao)r-=0.3;
+    if (r<=0)bianxiao=false;
+    if (!bianxiao)r+=0.3;
+    if (r>=maxr) bianxiao=true;
   }
   void display()
   {
     noStroke();
-    fill(R,G,B);
+    fill(R, G, B);
     ellipse(loc.x, loc.y, r, r);
   }
   void check()
